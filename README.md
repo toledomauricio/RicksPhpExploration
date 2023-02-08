@@ -13,7 +13,7 @@ Second, you can create a simple file and call the RickAndMorty class:
 require_once('RickAndMorty.php');
 
 $rickAndMorty = new RickAndMorty();
-$data = $rickAndMorty->fetchData('character', 1, 20);
+$data = $rickAndMorty->getData('character', 1, 20);
 
 print_r($data);
 ```
