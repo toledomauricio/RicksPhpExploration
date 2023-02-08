@@ -16,23 +16,22 @@ class RickAndMorty
         ]);
     }
 
-    /**
-     * Get a list of characters from the API, with optional parameters for pagination.
-     *
-     * @param int $page The page number to retrieve
-     * @param int $pageSize The number of items per page
-     * @return array An array of characters
-     */
-    public function getCharacters(int $page = 1, int $pageSize = 20): array
+    public function fetchData(string $type = 'character', int $page = 1, int $pageSize = 20): array 
     {
         $query = [
             'page' => $page,
             'pageSize' => $pageSize,
         ];
-        $response = $this->client->get('character', [
+        $response = $this->client->get($type, [
             'query' => $query,
         ]);
-        $characters = json_decode($response->getBody(), true);
-        return $characters['results'];
+        
+        $data = json_decode($response->getBody(), true);
+        return $data['results'];
+    }
+
+    public function getCharacters (int $page = 1, int $pageSize = 20): array
+    {
+        return $this->fetchData('character', $page, $pageSize);
     }
 }
