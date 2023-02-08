@@ -25,7 +25,7 @@ print_r($data);
 ✨Magic✨
 
 ## About the RickAndMorty Class
-By default, `fetchData()` returns data for characters on page 1 with 20 items per page, but you can modify these values as you like.
+By default, `getData()` returns data for characters, episodes or locations on page 1 with 20 items per page, but you can modify these values as you like.
 
 ## Contribute 🤝
 Found a bug or want to suggest a feature? Feel free to open an issue or submit a pull request!
