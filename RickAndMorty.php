@@ -24,7 +24,7 @@ class RickAndMorty
      * @param int $pageSize The number of items per page
      * @return array An array of data
      */
-    public function fetchData(string $endpoint = 'character', int $page = 1, int $pageSize = 20): array 
+    public function getData(string $endpoint = 'character', int $page = 1, int $pageSize = 20): array 
     {
         $query = [
             'page' => $page,
